@@ -1,6 +1,6 @@
 # VentureStarter: Launch Faster, Document Better
 
-## The Problem: The Documentation Bottleneck
+## The Problem: Time-Consuming Documentation
 
 You have a brilliant idea. You've secured the domain. You're ready to build.
 
@@ -13,9 +13,9 @@ You have a brilliant idea. You've secured the domain. You're ready to build.
 
 For solo founders and small teams, this initial documentation can consume days of valuable time - time better spent building your product or talking to customers.
 
-## The Solution: VentureStarter
+## The Solution: AI-Powered Documentation
 
-VentureStarter is a simple, zero-install tool that leverages Claude AI to generate all your essential GitHub documentation in minutes, not days.
+VentureStarter uses Claude AI to generate all your essential GitHub documentation in minutes, not days. It's the fastest way to get professional documentation for your new venture.
 
 ### How It Works:
 
@@ -24,7 +24,7 @@ VentureStarter is a simple, zero-install tool that leverages Claude AI to genera
 3. Paste into Claude
 4. Copy the generated artifacts to your GitHub repo
 
-**That's it.** No installations. No dependencies. No learning curve.
+**That's it.** No installations. No dependencies. Just AI-powered documentation generation.
 
 ## Why VentureStarter?
 

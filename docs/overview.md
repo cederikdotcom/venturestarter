@@ -6,9 +6,9 @@ VentureStarter is a zero-friction tool that uses Claude AI to automatically gene
 
 ## Core Concept
 
-The founding principle of VentureStarter is simple: **Documentation should never be the bottleneck to launching a new venture.**
+The founding principle of VentureStarter is simple: **Leverage AI to accelerate your venture's launch.**
 
-By providing a standardized prompt template for Claude, VentureStarter allows anyone to generate comprehensive GitHub documentation in minutes instead of hours.
+By using Claude's advanced language capabilities, VentureStarter helps you generate comprehensive GitHub documentation in minutes, allowing you to focus on building your product while maintaining professional documentation standards.
 
 ## Key Features
 
