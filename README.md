@@ -23,12 +23,43 @@ VentureStarter creates the following files:
 your-project/
 ├── README.md              # Developer instructions
 ├── docs/
+│   ├── index.html         # Landing page for your venture
 │   ├── salespitch.md      # Sales-focused document
 │   ├── overview.md        # Marketing overview
 │   ├── architecture.md    # Technical explanation
 │   └── progress/
 │       └── traction-update-[date].md  # Initial traction update
 ```
+
+## Quick Launch with GitHub Pages
+
+VentureStarter includes a landing page (`docs/index.html`) that you can quickly deploy using GitHub Pages. This gives you an instant website for your venture:
+
+1. Go to your repository's Settings
+2. Navigate to Pages under the Code and automation section
+3. Under "Build and deployment":
+   - Source: Select "Deploy from a branch"
+   - Branch: Select "main" (or your default branch) and "/docs" folder
+4. Click Save
+
+Your venture's landing page will be live at `https://<username>.github.io/<repository-name>/` within minutes. This is a great way to quickly establish an online presence for your venture while you build out your main product.
+
+## How It Works
+
+1. **Fill in Your Venture Details**
+   Answer a few questions about your new venture in our simple form.
+
+2. **Generate Your Prompt**
+   We'll create a specialized prompt for Claude AI based on your inputs.
+
+3. **Paste into Claude**
+   Copy the generated prompt and paste it into Claude to create your documentation.
+
+4. **Copy to GitHub**
+   Copy the artifacts Claude generates into your GitHub repository.
+
+5. **Launch Your Site**
+   Enable GitHub Pages to instantly launch your venture's landing page from the docs folder.
 
 ## How to Use
 

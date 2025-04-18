@@ -1,0 +1,107 @@
+/* How It Works Section */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #6366f1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    margin: 1rem 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.step p {
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Add connecting lines between steps */
+@media (min-width: 1025px) {
+    .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        right: -1rem;
+        width: 2rem;
+        height: 2px;
+        background: #e5e7eb;
+        transform: translateY(-50%);
+    }
+
+    /* Adjust the grid for 5 items */
+    .steps-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsive adjustments for 5 steps */
+@media (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .step:nth-child(4),
+    .step:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step:nth-child(n) {
+        grid-column: 1;
+    }
+} 

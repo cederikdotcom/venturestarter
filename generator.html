@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VentureStarter - Generate Your Documentation</title>
     <link rel="stylesheet" href="css/styles.css">
-    <meta name="description" content="Generate GitHub documentation for your new venture using Claude AI.">
+    <meta name="description" content="Generate GitHub documentation and landing page for your new venture using Claude AI.">
 </head>
 <body>
     <header class="header-small">
@@ -20,7 +20,7 @@
     <main class="generator-container">
         <div class="container">
             <h2>Create Your Documentation Prompt</h2>
-            <p class="generator-intro">Fill in the details about your venture below and we'll generate a prompt you can use with Claude AI to create your GitHub documentation.</p>
+            <p class="generator-intro">Fill in the details about your venture below and we'll generate a prompt you can use with Claude AI to create your GitHub documentation and landing page.</p>
             
             <div class="example-selector">
                 <label for="example-select">Need inspiration? Load an example:</label>
@@ -71,7 +71,7 @@
             
             <div id="result" class="result hidden">
                 <h3>Your Generated Prompt</h3>
-                <p class="result-instructions">Copy this prompt and paste it into Claude to generate your documentation.</p>
+                <p class="result-instructions">Copy this prompt and paste it into Claude to generate your documentation and landing page.</p>
                 
                 <div class="result-actions">
                     <button id="copy-prompt" class="btn btn-primary">Copy to Clipboard</button>
@@ -86,7 +86,7 @@
                     <h3>Next Steps</h3>
                     <ol>
                         <li>Paste the prompt into Claude</li>
-                        <li>Claude will generate 5 documentation artifacts</li>
+                        <li>Claude will generate 7 documentation artifacts</li>
                         <li>Copy each artifact to the appropriate location in your GitHub repository:
                             <ul>
                                 <li><code>README.md</code> (root level)</li>
@@ -94,8 +94,11 @@
                                 <li><code>docs/overview.md</code></li>
                                 <li><code>docs/architecture.md</code></li>
                                 <li><code>docs/progress/traction-update-[date].md</code></li>
+                                <li><code>docs/index.html</code> (landing page)</li>
+                                <li><code>docs/styles/style.css</code> (landing page styles)</li>
                             </ul>
                         </li>
+                        <li>Enable GitHub Pages in your repository settings to make your landing page live</li>
                     </ol>
                 </div>
             </div>
