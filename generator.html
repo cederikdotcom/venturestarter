@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VentureStarter - Generate Your Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Generate GitHub documentation for your new venture using Claude AI.">
+</head>
+<body>
+    <header class="header-small">
+        <div class="container">
+            <div class="header-flex">
+                <h1><a href="index.html">VentureStarter</a></h1>
+                <a href="https://github.com/yourusername/venturestarter" class="btn btn-small">View on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="generator-container">
+        <div class="container">
+            <h2>Create Your Documentation Prompt</h2>
+            <p class="generator-intro">Fill in the details about your venture below and we'll generate a prompt you can use with Claude AI to create your GitHub documentation.</p>
+            
+            <div class="example-selector">
+                <label for="example-select">Need inspiration? Load an example:</label>
+                <select id="example-select">
+                    <option value="">Select an example</option>
+                    <option value="saas">SaaS Product</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="marketplace">Online Marketplace</option>
+                </select>
+            </div>
+            
+            <form id="venture-form" class="venture-form">
+                <div class="form-group">
+                    <label for="venture-name">Venture Name*</label>
+                    <input type="text" id="venture-name" name="venture-name" required placeholder="e.g. WeatherWise">
+                </div>
+                
+                <div class="form-group">
+                    <label for="venture-description">Venture Description*</label>
+                    <textarea id="venture-description" name="venture-description" rows="5" required placeholder="Describe your venture, its purpose, how it works, and what makes it unique."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="target-audience">Target Audience*</label>
+                    <input type="text" id="target-audience" name="target-audience" required placeholder="e.g. Small business owners, outdoor enthusiasts, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="business-model">Business Model*</label>
+                    <input type="text" id="business-model" name="business-model" required placeholder="e.g. Freemium, subscription, one-time purchase, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="key-features">Key Features*</label>
+                    <textarea id="key-features" name="key-features" rows="4" required placeholder="List the main features of your product or service."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="technical-requirements">Technical Requirements <span class="optional">(optional)</span></label>
+                    <textarea id="technical-requirements" name="technical-requirements" rows="4" placeholder="Describe the technical stack, infrastructure, or other technical details."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Generate Prompt</button>
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                </div>
+            </form>
+            
+            <div id="result" class="result hidden">
+                <h3>Your Generated Prompt</h3>
+                <p class="result-instructions">Copy this prompt and paste it into Claude to generate your documentation.</p>
+                
+                <div class="result-actions">
+                    <button id="copy-prompt" class="btn btn-primary">Copy to Clipboard</button>
+                    <a href="https://claude.ai/chat" target="_blank" class="btn btn-secondary">Open Claude</a>
+                </div>
+                
+                <div class="prompt-container">
+                    <pre id="prompt-output"></pre>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>Next Steps</h3>
+                    <ol>
+                        <li>Paste the prompt into Claude</li>
+                        <li>Claude will generate 5 documentation artifacts</li>
+                        <li>Copy each artifact to the appropriate location in your GitHub repository:
+                            <ul>
+                                <li><code>README.md</code> (root level)</li>
+                                <li><code>docs/salespitch.md</code></li>
+                                <li><code>docs/overview.md</code></li>
+                                <li><code>docs/architecture.md</code></li>
+                                <li><code>docs/progress/traction-update-[date].md</code></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VentureStarter. Open source on <a href="https://github.com/yourusername/venturestarter">GitHub</a>.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
