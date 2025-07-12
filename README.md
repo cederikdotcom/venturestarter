@@ -1,13 +1,16 @@
-# VentureStarter
+# VentureStarter with NimsForest WebStack
 
-A simple tool that uses Claude to automatically generate GitHub project documentation scaffolding for new ventures.
+A simple tool that uses Claude to automatically generate GitHub project documentation scaffolding for new ventures, now enhanced with the **NimsForest WebStack** - a comprehensive web application framework that transforms documentation sites into full-featured web applications.
 
 ## What is VentureStarter?
 
 VentureStarter is a prompt template and instruction set for Claude that helps entrepreneurs quickly create standardized GitHub documentation for new venture projects. It's designed to handle the initial setup phase only, providing you with the core documentation files to get started.
 
+**Now with NimsForest WebStack Integration**: Your venture documentation can evolve into a complete web application with content management, dynamic features, API backend, and authentication.
+
 ## Getting Started
 
+### Option 1: Basic Documentation Setup
 1. **Copy the prompt template** from `docs/prompt-template.md`
 2. **Paste it into Claude** (works with Claude 3 models)
 3. **Fill in your venture details** where indicated
@@ -15,10 +18,22 @@ VentureStarter is a prompt template and instruction set for Claude that helps en
 
 No installation, no dependencies, no maintenance - just a simple prompt to help you create consistent documentation for new ventures.
 
+### Option 2: Full Web Application with NimsForest WebStack
+1. **Follow Option 1** to create your initial documentation
+2. **Run WebStack Setup**: `make setup` to install NimsForest components
+3. **Initialize WebStack**: `make init-webstack` to create the web application structure
+4. **Start Development**: `make nimsforestwebstack-dev` to launch all services
+
+Your venture will have:
+- **Content Management** (Hugo): http://localhost:1313
+- **Interactive Tools** (Next.js): http://localhost:3001
+- **Dynamic Application** (Next.js SSR): http://localhost:3000
+- **API Backend** (Go): http://localhost:8080
+- **Authentication** (Zitadel): http://localhost:8081
+
 ## Project Structure
 
-VentureStarter creates the following files:
-
+### Basic VentureStarter Structure:
 ```
 your-project/
 ├── README.md              # Developer instructions
@@ -29,6 +44,26 @@ your-project/
 │   ├── architecture.md    # Technical explanation
 │   └── progress/
 │       └── traction-update-[date].md  # Initial traction update
+```
+
+### With NimsForest WebStack Integration:
+```
+your-project/
+├── README.md              # Developer instructions
+├── docs/                  # Original documentation
+├── webstack/              # Full web application (NEW)
+│   ├── hugo-site/         # Content management system
+│   ├── nextjs-tools/      # Interactive components
+│   ├── nextjs-app/        # Dynamic web application
+│   ├── api/               # Backend API services
+│   ├── auth/              # Authentication system
+│   └── infrastructure/    # Docker & Nginx configs
+├── tools/                 # NimsForest components (NEW)
+│   ├── nimsforestpm/      # Package manager
+│   └── nimsforestwebstack/# WebStack framework
+├── Makefile               # Enhanced with WebStack commands
+├── .env                   # Environment configuration
+└── NIMSFOREST_INTEGRATION.md  # Integration guide
 ```
 
 ## Quick Launch with GitHub Pages
@@ -80,6 +115,28 @@ It is **not**:
 - A development framework
 - A continuous documentation system
 - A replacement for proper product documentation
+
+## NimsForest WebStack Features
+
+When you integrate NimsForest WebStack, your venture gets:
+
+### 🏗️ Complete Web Stack
+- **Content Management**: Hugo static site generator with Docsy theme
+- **Interactive Tools**: Next.js for calculators, forms, and widgets
+- **Dynamic Application**: Next.js with SSR for user dashboards
+- **API Backend**: Go-based API for business logic
+- **Authentication**: Zitadel for user management and SSO
+- **Infrastructure**: Docker containers with Nginx load balancing
+
+### 🛠️ Developer Experience
+- **Hot Reload**: Instant updates during development
+- **TypeScript Support**: Type-safe development
+- **Testing Suite**: Automated testing for all components
+- **CI/CD Ready**: GitHub Actions workflows included
+- **Production Ready**: Docker deployment configurations
+
+### 📚 Documentation
+See `NIMSFOREST_INTEGRATION.md` for detailed integration guide and usage instructions.
 
 ## License
 

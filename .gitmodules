@@ -1,0 +1,6 @@
+[submodule "tools/nimsforestpm"]
+	path = tools/nimsforestpm
+	url = https://github.com/nimsforest/nimsforestpackagemanager.git
+[submodule "tools/nimsforestwebstack"]
+	path = tools/nimsforestwebstack
+	url = https://github.com/nimsforest/nimsforestwebstack.git
