@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  hugo:
+    image: hugomods/hugo:exts
+    command: hugo server --bind 0.0.0.0 --buildDrafts --navigateToChanged
+    volumes:
+      - ./hugo-site:/src
+    ports:
+      - "1313:1313"
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - HUGO_WATCH=true
+
+  nextjs-tools:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm audit fix && npx next dev -p 3001"
+    volumes:
+      - ./nextjs-tools:/app
+    ports:
+      - "3001:3001"
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - NPM_CONFIG_UPDATE_NOTIFIER=false
+
+  nextjs-app:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm audit fix && npx next dev -p 3000"
+    volumes:
+      - ./nextjs-app:/app
+    ports:
+      - "3000:3000"
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - NPM_CONFIG_UPDATE_NOTIFIER=false
+
+  api:
+    image: golang:1.21-alpine
+    working_dir: /app
+    command: sh -c "go mod tidy && go run ."
+    volumes:
+      - ./api:/app
+    ports:
+      - "8080:8080"
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - GOCACHE=/tmp
+      - GOPATH=/tmp/go
+      - TMPDIR=/tmp
